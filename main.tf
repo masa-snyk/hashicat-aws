@@ -91,7 +91,6 @@ resource "aws_route_table_association" "hashicat" {
   route_table_id = aws_route_table.hashicat.id
 }
 
-/*
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -108,7 +107,6 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
-*/
 
 resource "aws_eip" "hashicat" {
   instance = aws_instance.hashicat.id
@@ -121,8 +119,8 @@ resource "aws_eip_association" "hashicat" {
 }
 
 resource "aws_instance" "hashicat" {
-  # ami                         = data.aws_ami.ubuntu.id
-  ami                         = "ami-0279c3b3186e54acd"
+  ami = data.aws_ami.ubuntu.id
+  # ami                         = "ami-0279c3b3186e54acd"
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.hashicat.key_name
   associate_public_ip_address = true

@@ -4,14 +4,15 @@
 
 cat << EOM > /var/www/html/index.html
 <html>
-  <head><title>Meow!</title></head>
+  <head><title>Meow!</title>
+	<meta charset="utf-8" /></head>
   <body>
   <div style="width:800px;margin: 0 auto">
 
   <!-- BEGIN -->
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
-  <center><h2>Meow World!</h2></center>
-  <center><b>Welcome to ${PREFIX}'s app. Replace this text with your own.</b></center>
+  <center><h2>髭おじさん!</h2></center>
+  <center><b>Welcome to ${PREFIX}'s app.</b></center>
   <!-- END -->
 
   </div>

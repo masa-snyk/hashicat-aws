@@ -11,7 +11,7 @@ cat << EOM > /var/www/html/index.html
 
   <!-- BEGIN -->
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
-  <center><h2>髭おじさん!</h2></center>
+  <center><h2>Hello!</h2></center>
   <center><b>Welcome to ${PREFIX}'s app.</b></center>
   <!-- END -->
 
